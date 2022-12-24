@@ -9,7 +9,7 @@ jobs:
       - name: Build Images
         shell: cmd
         run: docker build -t nksoni/demo-git-repo
-      - name:Push Image
+      - name: Push Image
         shell: cmd
         run: docker push  nksoni/demo-git-repo
     
