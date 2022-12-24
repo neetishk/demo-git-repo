@@ -2,14 +2,14 @@ name: nginx-deployment
 on: push
 jobs:
   my-job:
-    runs-on: Linux
+    runs-on: Windows
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: update website
-        run: cp -vrf . /var/www/html
-      - name: check files
-        run: ls -1 /var/www/html 
-       
+      - name: Checking Docker Images
+        shell: cmd
+        run: docker images
+    
+   
  
  
