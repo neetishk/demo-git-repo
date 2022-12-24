@@ -1,11 +1,15 @@
-name: heloo-world
+name: nginx-deployment
 on: push
 jobs:
   my-job:
     runs-on: Linux
     steps:
-      - name: message
-        run: set 
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: update website
+        run: cp -vrf . /var/www/html
+      - name: check files
+        run: ls -1 /var/www/html 
        
  
  
