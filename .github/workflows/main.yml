@@ -6,5 +6,6 @@ jobs:
     steps:
       - name: message
         shell: pwsh
-        run: gci env:* | short object name
+        run: |
+           gci env:* | sort-object name
  
