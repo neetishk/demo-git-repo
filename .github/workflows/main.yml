@@ -6,9 +6,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Checking Docker Images
+      - name: Build Images
         shell: cmd
-        run: docker images
+        run: docker build -t nksoni/demo-git-repo
+      - name:Push Image
+        shell: cmd
+        run: docker push  nksoni/demo-git-repo
     
    
  
