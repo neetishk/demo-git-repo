@@ -12,6 +12,12 @@ jobs:
       - name: Push Image
         shell: cmd
         run: docker push  nksoni/demo-git-repo
+      - name: Kubernetes Deployment
+        shell: cmd
+        run: kubectl apply -f k8s.yaml
+      - name: Test
+        shell: cmd
+        run: kubectl get all
     
    
  
